@@ -3,77 +3,112 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Web Components</title>
   </head>
   <body>
-    <!--Forms-->
-    <!--swappable Form-->
-    <div>
-      <!--Login Form-->
-      <div>
-        <h2>Hello, Welcome!</h2>
-        <p>Don't have an account?</p>
-        <button>Register</button>
-        <form action="">
-          <h3>Login</h3>
-          <div>
-            <input type="text" name="" id="" placeholder="Username" />
-            <img src="" alt="" />
-          </div>
-          <div>
-            <input type="password" name="" id="" placeholder="Password" />
-            <img src="" alt="" />
-          </div>
-          <a href="#">Forgot Password?</a>
-          <button>Login</button>
-        </form>
-        <p>Or login with social platforms</p>
-        <div>
-          <button><img src="./icons/google.png" alt="Google Logo" /></button>
-          <button>
-            <img src="./icons/facebook.png" alt="Facebook Logo" />
-          </button>
-          <button><img src="./icons/github.png" alt="Github Logo" /></button>
-          <button>
-            <img src="./icons/linkedin.png" alt="linkedin Logo" />
-          </button>
-        </div>
-      </div>
+    <div class="container">
+      <!--Forms-->
+      <!--swappable Form-->
+      <div class="component">
+        <h2>Swappable Form</h2>
+        <div class="swappable-form">
+          <div class="content">
+            <!--Login Form-->
+            <div class="login-form">
+              <div class="form-header">
+                <h3>Hello, Welcome!</h3>
+                <p>Don't have an account?</p>
+                <button>Register</button>
+              </div>
+              <div class="form-wrapper">
+                <h4>Login</h4>
+                <form action="">
+                  <div class="form-input">
+                    <input type="text" name="" id="" placeholder="Username" />
+                    <img src="" alt="" />
+                  </div>
+                  <div class="form-input">
+                    <input
+                      type="password"
+                      name=""
+                      id=""
+                      placeholder="Password"
+                    />
+                    <img src="" alt="" />
+                  </div>
+                  <a href="#">Forgot Password?</a>
+                  <button>Login</button>
+                </form>
+                <p>Or login with social platforms</p>
+                <div class="social-buttons">
+                  <button>
+                    <img src="./icons/google.png" alt="Google Logo" />
+                  </button>
+                  <button>
+                    <img src="./icons/facebook.png" alt="Facebook Logo" />
+                  </button>
+                  <button>
+                    <img src="./icons/github.png" alt="Github Logo" />
+                  </button>
+                  <button>
+                    <img src="./icons/linkedin.png" alt="linkedin Logo" />
+                  </button>
+                </div>
+              </div>
+            </div>
 
-      <!--Register Form-->
-      <div>
-        <h2>Welcome Back!</h2>
-        <p>Already have an account?</p>
-        <button>login</button>
-        <form action="">
-          <h3>Registration</h3>
-          <div>
-            <input type="text" name="" id="" placeholder="Username" />
-            <img src="" alt="" />
+            <!--Register Form-->
+            <div class="register-form">
+              <div class="form-header">
+                <h3>Welcome Back!</h3>
+                <p>Already have an account?</p>
+                <button>Login</button>
+              </div>
+              <div class="form-wrapper">
+                <h4>Registration</h4>
+                <form action="">
+                  <div class="form-input">
+                    <input type="text" name="" id="" placeholder="Username" />
+                    <img src="" alt="" />
+                  </div>
+                  <div class="form-input">
+                    <input type="email" name="" id="" placeholder="Email" />
+                    <img src="" alt="" />
+                  </div>
+                  <div class="form-input">
+                    <input
+                      type="password"
+                      name=""
+                      id=""
+                      placeholder="Password"
+                    />
+                    <img src="" alt="" />
+                  </div>
+                  <button>Register</button>
+                </form>
+                <p>Or register with social platforms</p>
+                <div class="social-buttons">
+                  <button>
+                    <img src="./icons/google.png" alt="Google Logo" />
+                  </button>
+                  <button>
+                    <img src="./icons/facebook.png" alt="Facebook Logo" />
+                  </button>
+                  <button>
+                    <img src="./icons/github.png" alt="Github Logo" />
+                  </button>
+                  <button>
+                    <img src="./icons/linkedin.png" alt="linkedin Logo" />
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
-          <div>
-            <input type="email" name="" id="" placeholder="Email" />
-            <img src="" alt="" />
-          </div>
-          <div>
-            <input type="password" name="" id="" placeholder="Password" />
-            <img src="" alt="" />
-          </div>
-          <a href="#">Forgot Password?</a>
-          <button>Register</button>
-        </form>
-        <p>Or register with social platforms</p>
-        <div>
-          <button><img src="./icons/google.png" alt="Google Logo" /></button>
-          <button>
-            <img src="./icons/facebook.png" alt="Facebook Logo" />
-          </button>
-          <button><img src="./icons/github.png" alt="Github Logo" /></button>
-          <button>
-            <img src="./icons/linkedin.png" alt="linkedin Logo" />
-          </button>
+          <div class="overlay"></div>
         </div>
       </div>
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>
