@@ -2,7 +2,7 @@
   --main-color: #136bf0;
   --text-color: #fff;
   --dark-text-color: #111111;
-  --form-header-radius: 0 150px 150px 0;
+  --form-header-radius: 150px;
   --button-radius: 6px;
   --border-color: #e2e2e2;
 }
@@ -26,10 +26,13 @@ body {
   gap: 6px;
 }
 .component {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 32px;
+  padding: 16px;
+  background-image: linear-gradient(to right, #aad9ff, #0065c4);
 }
 .component h2 {
   font-size: 48px;
@@ -41,23 +44,34 @@ body {
   display: flex;
   position: relative;
   overflow: hidden;
+  background-color: #fff;
+  border-radius: var(--button-radius);
+  -webkit-border-radius: var(--button-radius);
+  -moz-border-radius: var(--button-radius);
+  -ms-border-radius: var(--button-radius);
+  -o-border-radius: var(--button-radius);
 }
 .swappable-form button {
   cursor: pointer;
 }
-.swappable-form .content {
+.swappable-form .forms-wrapper {
   width: 200%;
   height: 100%;
   display: flex;
 }
-.swappable-form .form {
-  display: flex;
-  justify-content: space-between;
-  /* gap: 16px; */
+.swappable-form .form-wrapper {
   min-width: 100%;
+  display: flex;
   position: relative;
 }
-.swappable-form .form-content {
+.swappable-form .form-wrapper.login-form {
+  justify-content: flex-end;
+}
+.swappable-form .form-wrapper {
+  animation: slide-left 3s linear forwards;
+  -webkit-animation: slide-left 3s linear forwards;
+}
+.swappable-form .form-wrapper-content {
   width: 48%;
   display: flex;
   flex-direction: column;
@@ -89,16 +103,19 @@ body {
   -ms-border-radius: var(--button-radius);
   -o-border-radius: var(--button-radius);
 }
+.swappable-form .form-wrapper {
+  padding: 16px;
+}
+.swappable-form .form-wrapper h4 {
+  font-size: 28px;
+  font-weight: 600;
+}
 .swappable-form .form-wrapper form {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
-}
-.swappable-form .form-wrapper h4 {
-  font-size: 28px;
-  font-weight: 600;
 }
 .swappable-form .form-wrapper form a {
   color: var(--dark-text-color);
@@ -140,8 +157,6 @@ body {
   -ms-border-radius: var(--button-radius);
   -o-border-radius: var(--button-radius);
 }
-.swappable-form .social-buttons {
-}
 .social-platform {
   width: 100%;
   display: flex;
@@ -166,17 +181,6 @@ body {
   background-color: var(--main-color);
   border: 2px solid var(--main-color);
 }
-/*
-.swappable-form .form-wrapper form {
- 
- 
-}
-
-
-
-
-
-*/
 .social-buttons img {
   width: 16px;
   height: 16px;
@@ -185,8 +189,8 @@ body {
 .swappable-form .overlay {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 48%;
+  left: -100%;
+  width: 150%;
   height: 100%;
   background-color: var(--main-color);
   border-radius: var(--form-header-radius);
@@ -194,4 +198,29 @@ body {
   -moz-border-radius: var(--form-header-radius);
   -ms-border-radius: var(--form-header-radius);
   -o-border-radius: var(--form-header-radius);
+  animation: slide-right 3s linear forwards;
+  -webkit-animation: slide-right 3s linear forwards;
+}
+@keyframes slide-left {
+  100% {
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+}
+}
+@keyframes slide-right {
+  100% {
+    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+}
+}
+@keyframes expand-shrink-left {
+  50% {
+    width: 100%;
+  }
 }
